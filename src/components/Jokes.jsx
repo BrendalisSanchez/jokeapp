@@ -5,35 +5,18 @@ import jokeService from "../jokeService";
 function Jokes() {
   //#region --- STATE:
   const [jokeData, setJokeData] = useState();
-  //   {
-  //   arrayOfJokes: [],
-  //   jokeComponents: [],
-  // }
-
-  //console.log(jokeData.arrayOfJokes, "this is the arrayOfJokes");
-
   //#endregion
 
-  //#region --- JOKES AJAX CALL CODE:
+  //#region --- AXIOS CALL:
   useEffect(() => {
-    //console.log("firing useEffect for get JOKES AJAX call");
     jokeService().then(onGetJokesSuccess).catch(onGetJokesError);
     // eslint-disable-next-line
   }, []);
 
   const onGetJokesSuccess = (response) => {
-    // console.log(
-    //   response.data.jokes,
-    //   "this is the response from the axios call"
-    // );
-
     let arrayOfJokes = response.data.jokes;
 
     setJokeData(() => {
-      //const jokeData = [...jokeData];
-      // const jokeData = { ...prevState };
-      // jokeData.arrayOfJokes = [...jokeData.arrayOfJokes];
-      //jokeData.jokeComponents = arrayOfJokes.map(mapJoke);
       const jokeData = arrayOfJokes.map(mapJoke);
       return jokeData;
     });
@@ -44,7 +27,7 @@ function Jokes() {
   };
   //#endregion
 
-  // ----- TOGGLE CODE:
+  //#region --- TOGGLE:
   const [showJokes, setShowJokes] = useState(true);
 
   const onToggleJokes = () => {
@@ -56,30 +39,42 @@ function Jokes() {
   console.log(toggle);
   console.log(setToggle);
   console.log(onToggleJokes);
+  //#endregion
 
-  // ----- MAPPING CODE:
+  //#region --- MAPPING:
   const mapJoke = (aJoke) => {
     return (
-      <div className="col-md-3" key={"ListA-" + aJoke.id}>
+      <div
+        className="col-4"
+        // className="grid-container"
+        key={"ListA-" + aJoke.id}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <div className="card" style={{ width: "18rem" }}>
           <div className="card-body">
-            <h5 className="card-title">
-              {aJoke.category} - {aJoke.type}
-            </h5>
-            <p className="card-text">{aJoke.joke}</p>
             <br />
-            <p>{aJoke.setup}</p>
+            <h2 className="card-title">
+              {aJoke.category} - {aJoke.type}
+            </h2>
+            <h3 className="card-text">{aJoke.joke}</h3>
+            <h3>{aJoke.setup}</h3>
             <p>{aJoke.delivery}</p>
+            <br />
           </div>
         </div>
       </div>
     );
   };
+  //#endregion
 
   return (
     <div className="container">
-      <h3>Programming Jokes</h3>
-      <div className="row">{showJokes && jokeData.jokeComponents}</div>
+      <h1>Programming Jokes</h1>
+      {showJokes && jokeData}
       <button type="button" id="friendsBtn" onClick={onToggleJokes}>
         {" "}
         Show/Hide{" "}
