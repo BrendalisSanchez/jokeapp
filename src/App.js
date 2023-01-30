@@ -1,26 +1,15 @@
 //import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
-import Jokes from "./components/Jokes";
+import Characters from "./components/Characters";
 
 function App() {
   return (
-    <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-      <div>
-        <Jokes />
+    <div className="container">
+      <h3>Game of Thrones Characters</h3>
+      <div className="row">
+        {/* {showCharacters && pageData.characterComponents} */}
+        <Characters />
       </div>
     </div>
   );
