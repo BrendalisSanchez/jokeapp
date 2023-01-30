@@ -1,22 +1,22 @@
 import axios from "axios";
 
 //#region --- SABIO
-const characterService = {
-  endpoint: "https://thronesapi.com/api/v2/Characters",
-};
+// function characterService() {
+//   const getAll = () => {
+//     const config = {
+//       method: "GET",
+//       url: "https://thronesapi.com/api/v2/Characters",
+//       crossdomain: true,
+//       headers: { "Content-Type": "application/json" },
+//     };
 
-characterService.getAll = () => {
-  const config = {
-    method: "GET",
-    url: `${characterService.endpoint}`,
-    crossdomain: true,
-    headers: { "Content-Type": "application/json" },
-  };
+//     return axios(config);
+//   };
 
-  return axios(config);
-};
+//   console.log(getAll);
+// }
 
-export default characterService;
+// export default characterService;
 //#endregion
 
 //#region --- Reactjs Documentation
@@ -62,23 +62,23 @@ export default characterService;
 // }
 //#endregion
 
-// const options = {
-//   method: "GET",
-//   url: "https://game-of-thrones1.p.rapidapi.com/Characters",
-//   //url: "https://thronesapi.com/api/v2/Characters",
-//   headers: {
-//     "X-RapidAPI-Key": "81b71118dfmshe652801249d8d1cp1c4be1jsn32ea620b43d1",
-//     "X-RapidAPI-Host": "game-of-thrones1.p.rapidapi.com",
-//   },
-// };
+const options = {
+  method: "GET",
+  url: "https://game-of-thrones1.p.rapidapi.com/Characters",
+  //url: "https://thronesapi.com/api/v2/Characters",
+  headers: {
+    "X-RapidAPI-Key": "81b71118dfmshe652801249d8d1cp1c4be1jsn32ea620b43d1",
+    "X-RapidAPI-Host": "game-of-thrones1.p.rapidapi.com",
+  },
+};
 
-// axios
-//   .request(options)
-//   .then(function (response) {
-//     console.log(response.data);
-//   })
-//   .catch(function (error) {
-//     console.error(error);
-//   });
+axios
+  .request(options)
+  .then(function (response) {
+    console.log(response.data);
+  })
+  .catch(function (error) {
+    console.error(error);
+  });
 
-// export { options };
+export { options };

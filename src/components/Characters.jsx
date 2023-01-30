@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-//import { options } from "../characterService";
-import characterService from "../characterService";
+import { options } from "../characterService";
+//import characterService from "../characterService";
 
 function Characters() {
   //#region --- STATE:
@@ -12,8 +12,8 @@ function Characters() {
 
   //#region --- AXIOS CALL:
   useEffect(() => {
-    //options().then(onGetCharacterSuccess).catch(onGetCharacterError);
-    characterService().then(onGetCharacterSuccess).catch(onGetCharacterError);
+    options().then(onGetCharacterSuccess).catch(onGetCharacterError);
+    //characterService().then(onGetCharacterSuccess).catch(onGetCharacterError);
     // eslint-disable-next-line
   }, []);
 
