@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-//import { getJoke } from "../jokeService";
 import jokeService from "../jokeService";
 
 function Jokes() {
@@ -46,7 +45,6 @@ function Jokes() {
     return (
       <div
         className="col-4"
-        // className="grid-container"
         key={"ListA-" + aJoke.id}
         style={{
           display: "flex",
