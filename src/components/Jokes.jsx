@@ -66,6 +66,7 @@ function Jokes() {
         </div>
       </div>
 
+      // --- CAROUSEL NOT WORKING
       // <div
       //   id="carouselExampleAutoplaying"
       //   className="carousel slide"
@@ -99,6 +100,8 @@ function Jokes() {
       //     <span className="visually-hidden">Next</span>
       //   </button>
       // </div>
+
+      // --- KITCHEN SINK CARD
     );
   };
 
@@ -124,8 +127,9 @@ function Jokes() {
   return (
     <div className="container">
       <h1>Programming Jokes</h1>
-      {showJokes && jokeData}
-      <button type="button" id="friendsBtn" onClick={onToggleJokes}>
+      <div className="row">{showJokes && jokeData}</div>
+
+      <button type="button" id="showHideCharBtn" onClick={onToggleJokes}>
         {" "}
         Show/Hide{" "}
       </button>
