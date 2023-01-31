@@ -65,8 +65,60 @@ function Jokes() {
           </div>
         </div>
       </div>
+
+      // <div
+      //   id="carouselExampleAutoplaying"
+      //   className="carousel slide"
+      //   data-bs-ride="carousel"
+      // >
+      //   <div className="carousel-inner">
+      //     <div className="carousel-item active">{eachJoke}</div>
+      //     <div className="carousel-item">
+      //       <img src="..." className="d-block w-100" alt="..." />
+      //     </div>
+      //     <div className="carousel-item">
+      //       <img src="..." className="d-block w-100" alt="..." />
+      //     </div>
+      //   </div>
+      //   <button
+      //     className="carousel-control-prev"
+      //     type="button"
+      //     data-bs-target="#carouselExampleAutoplaying"
+      //     data-bs-slide="prev"
+      //   >
+      //     <span className="carousel-control-prev-icon" aria-hidden="true" />
+      //     <span className="visually-hidden">Previous</span>
+      //   </button>
+      //   <button
+      //     className="carousel-control-next"
+      //     type="button"
+      //     data-bs-target="#carouselExampleAutoplaying"
+      //     data-bs-slide="next"
+      //   >
+      //     <span className="carousel-control-next-icon" aria-hidden="true" />
+      //     <span className="visually-hidden">Next</span>
+      //   </button>
+      // </div>
     );
   };
+
+  // const eachJoke = (aJoke) => {
+  //   <div class="card" key={"ListA-" + aJoke.id}>
+  //     <div class="card-header">
+  //       {aJoke.category} - {aJoke.type}
+  //     </div>
+  //     <div class="card-body">
+  //       <blockquote class="blockquote mb-0">
+  //         <p>{aJoke.joke}</p>
+  //         <p>{aJoke.setup}</p>
+  //         <footer class="blockquote-footer">
+  //           {aJoke.delivery} <cite title="Source Title">Source Title</cite>
+  //         </footer>
+  //       </blockquote>
+  //     </div>
+  //   </div>;
+  // };
+
   //#endregion
 
   return (
