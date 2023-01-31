@@ -100,8 +100,6 @@ function Jokes() {
       //     <span className="visually-hidden">Next</span>
       //   </button>
       // </div>
-
-      // --- KITCHEN SINK CARD
     );
   };
 
