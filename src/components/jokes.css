@@ -1,3 +1,14 @@
+/* @import blackskygalaxy from "../assets/blackskygalaxy.png";
+
+body {
+    style={{
+        backgroundImage: `url(${blackskygalaxy})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
+        backgroundRepeat: "no-repeat",
+      }}
+} */
+
 .card {
   font: green;
 }

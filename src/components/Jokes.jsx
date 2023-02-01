@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import jokeService from "../jokeService";
 import headerpresentation from "../assets/headerpresentation.gif";
-import blackskygalaxy from "../assets/blackskygalaxy.png";
+//import blackskygalaxy from "../assets/blackskygalaxy.png";
 
 function Jokes() {
   //#region --- STATE:
@@ -75,12 +75,12 @@ function Jokes() {
   return (
     <div
       className="container"
-      style={{
-        backgroundImage: `url(${blackskygalaxy})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center center",
-        backgroundRepeat: "no-repeat",
-      }}
+      // style={{
+      //   backgroundImage: `url(${blackskygalaxy})`,
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center center",
+      //   backgroundRepeat: "no-repeat",
+      // }}
     >
       <img src={headerpresentation} alt="loading..." />
 
