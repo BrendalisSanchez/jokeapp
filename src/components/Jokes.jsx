@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import jokeService from "../jokeService";
+import headerpresentation from "../assets/headerpresentation.gif";
+import blackskygalaxy from "../assets/blackskygalaxy.png";
 
 function Jokes() {
   //#region --- STATE:
@@ -65,70 +67,22 @@ function Jokes() {
           </div>
         </div>
       </div>
-
-      // --- CAROUSEL NOT WORKING
-      // <div
-      //   id="carouselExampleAutoplaying"
-      //   className="carousel slide"
-      //   data-bs-ride="carousel"
-      // >
-      //   <div className="carousel-inner">
-      //     <div className="carousel-item active">{eachJoke}</div>
-      //     <div className="carousel-item">
-      //       <img src="..." className="d-block w-100" alt="..." />
-      //     </div>
-      //     <div className="carousel-item">
-      //       <img src="..." className="d-block w-100" alt="..." />
-      //     </div>
-      //   </div>
-      //   <button
-      //     className="carousel-control-prev"
-      //     type="button"
-      //     data-bs-target="#carouselExampleAutoplaying"
-      //     data-bs-slide="prev"
-      //   >
-      //     <span className="carousel-control-prev-icon" aria-hidden="true" />
-      //     <span className="visually-hidden">Previous</span>
-      //   </button>
-      //   <button
-      //     className="carousel-control-next"
-      //     type="button"
-      //     data-bs-target="#carouselExampleAutoplaying"
-      //     data-bs-slide="next"
-      //   >
-      //     <span className="carousel-control-next-icon" aria-hidden="true" />
-      //     <span className="visually-hidden">Next</span>
-      //   </button>
-      // </div>
     );
   };
-
-  // const eachJoke = (aJoke) => {
-  //   <div class="card" key={"ListA-" + aJoke.id}>
-  //     <div class="card-header">
-  //       {aJoke.category} - {aJoke.type}
-  //     </div>
-  //     <div class="card-body">
-  //       <blockquote class="blockquote mb-0">
-  //         <p>{aJoke.joke}</p>
-  //         <p>{aJoke.setup}</p>
-  //         <footer class="blockquote-footer">
-  //           {aJoke.delivery} <cite title="Source Title">Source Title</cite>
-  //         </footer>
-  //       </blockquote>
-  //     </div>
-  //   </div>;
-  // };
-
   //#endregion
 
   return (
-    <div className="container">
-      {/* <h1>Programming Jokes</h1> */}
-      <img
-        src="https://www.canva.com/design/DAFZTBsYM0Y/r1wBh5Wrxfj00JFu26Iu_A/view?utm_content=DAFZTBsYM0Y&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
-        alt="Video Game Presentation"
-      />
+    <div
+      className="container"
+      style={{
+        backgroundImage: `url(${blackskygalaxy})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <img src={headerpresentation} alt="loading..." />
+
       <div className="row">{showJokes && jokeData}</div>
 
       <button type="button" id="showHideCharBtn" onClick={onToggleJokes}>
