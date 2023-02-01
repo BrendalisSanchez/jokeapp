@@ -124,7 +124,11 @@ function Jokes() {
 
   return (
     <div className="container">
-      <h1>Programming Jokes</h1>
+      {/* <h1>Programming Jokes</h1> */}
+      <img
+        src="https://www.canva.com/design/DAFZTBsYM0Y/r1wBh5Wrxfj00JFu26Iu_A/view?utm_content=DAFZTBsYM0Y&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+        alt="Video Game Presentation"
+      />
       <div className="row">{showJokes && jokeData}</div>
 
       <button type="button" id="showHideCharBtn" onClick={onToggleJokes}>
