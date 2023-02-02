@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import jokeService from "../jokeService";
 import headerpresentation from "../assets/headerpresentation.gif";
 //import blackskygalaxy from "../assets/blackskygalaxy.png";
+import { TabContainer, Row, Col } from "react-bootstrap";
 
 function Jokes() {
   //#region --- STATE:
@@ -73,36 +74,42 @@ function Jokes() {
   //#endregion
 
   return (
-    <div
-      className="container"
-      // style={{
-      //   backgroundImage: `url(${blackskygalaxy})`,
-      //   backgroundSize: "cover",
-      //   backgroundPosition: "center center",
-      //   backgroundRepeat: "no-repeat",
-      // }}
-    >
-      <img src={headerpresentation} alt="loading..." />
+    <TabContainer>
+      <Row>
+        <Col className="col-4">
+          {/* <div
+        className="container"
+        // style={{
+        //   backgroundImage: `url(${blackskygalaxy})`,
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "center center",
+        //   backgroundRepeat: "no-repeat",
+        // }}
+      > */}
+          <img src={headerpresentation} alt="loading..." />
 
-      <div className="row">{showJokes && jokeData}</div>
+          <div className="row">{showJokes && jokeData}</div>
 
-      <div className="card">
-        <h5 className="card-header">Featured</h5>
-        <div className="card-body">
-          <h5 className="card-title">Special title treatment</h5>
-          <p className="card-text">
-            With supporting text below as a natural lead-in to additional
-            content.
-          </p>
-          {showJokes && jokeData}
-        </div>
-      </div>
+          <div className="card">
+            <h5 className="card-header">Featured</h5>
+            <div className="card-body">
+              <h5 className="card-title">Special title treatment</h5>
+              <p className="card-text">
+                With supporting text below as a natural lead-in to additional
+                content.
+              </p>
+              {showJokes && jokeData}
+            </div>
+          </div>
 
-      <button type="button" id="showHideCharBtn" onClick={onToggleJokes}>
-        {" "}
-        Show/Hide{" "}
-      </button>
-    </div>
+          <button type="button" id="showHideCharBtn" onClick={onToggleJokes}>
+            {" "}
+            Show/Hide{" "}
+          </button>
+          {/* </div> */}
+        </Col>
+      </Row>
+    </TabContainer>
   );
 }
 
