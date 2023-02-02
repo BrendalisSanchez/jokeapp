@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import jokeService from "../jokeService";
 import headerpresentation from "../assets/headerpresentation.gif";
 //import blackskygalaxy from "../assets/blackskygalaxy.png";
-import { TabContainer, Row, Col } from "react-bootstrap";
+import { TabContainer, Row, Col, Card } from "react-bootstrap";
 
 function Jokes() {
   //#region --- STATE:
@@ -56,18 +56,20 @@ function Jokes() {
           justifyContent: "center",
         }}
       >
-        <div className="card" style={{ width: "18rem" }}>
+        <Card className="col-4">
+          {/* <div className="card" style={{ width: "18rem" }}>
           <div className="card-body">
-            <br />
-            <h2 className="card-title">
-              {aJoke.category} - {aJoke.type}
-            </h2>
-            <h3 className="card-text">{aJoke.joke}</h3>
-            <h3>{aJoke.setup}</h3>
-            <p>{aJoke.delivery}</p>
-            <br />
+            <br /> */}
+          <h2 className="card-title">
+            {aJoke.category} - {aJoke.type}
+          </h2>
+          <h3 className="card-text">{aJoke.joke}</h3>
+          <h3>{aJoke.setup}</h3>
+          <p>{aJoke.delivery}</p>
+          {/* <br />
           </div>
-        </div>
+        </div> */}
+        </Card>
       </div>
     );
   };
@@ -75,7 +77,7 @@ function Jokes() {
 
   return (
     <TabContainer>
-      <Row>
+      <Row className="col-4">
         <Col className="col-4">
           {/* <div
         className="container"
@@ -86,27 +88,14 @@ function Jokes() {
         //   backgroundRepeat: "no-repeat",
         // }}
       > */}
-          <img src={headerpresentation} alt="loading..." />
-
-          <div className="row">{showJokes && jokeData}</div>
-
-          <div className="card">
-            <h5 className="card-header">Featured</h5>
-            <div className="card-body">
-              <h5 className="card-title">Special title treatment</h5>
-              <p className="card-text">
-                With supporting text below as a natural lead-in to additional
-                content.
-              </p>
-              {showJokes && jokeData}
-            </div>
-          </div>
-
-          <button type="button" id="showHideCharBtn" onClick={onToggleJokes}>
-            {" "}
-            Show/Hide{" "}
-          </button>
-          {/* </div> */}
+          <img
+            src={headerpresentation}
+            alt="loading..."
+            onClick={onToggleJokes}
+          />
+          {/* <div className="row">{showJokes && jokeData}</div> */}
+          {/* <div>{showJokes && jokeData}</div> */}
+          {showJokes && jokeData}
         </Col>
       </Row>
     </TabContainer>
